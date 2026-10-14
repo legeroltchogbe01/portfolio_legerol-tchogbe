@@ -3,774 +3,336 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Légérol TCHOGBE | Portfolio Créatif</title>
+  <title>Légérol TCHOGBE — Développeur web full-stack à Cotonou</title>
+  <meta name="description" content="Portfolio de Légérol TCHOGBE, développeur web full-stack basé à Cotonou (Bénin) : plateformes de commande en ligne, portails B2B, EdTech, intégration d'IA et automatisation.">
+  <meta name="author" content="Légérol TCHOGBE">
+  <meta name="theme-color" content="#0e0d0b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Légérol TCHOGBE — Développeur web full-stack">
+  <meta property="og:description" content="Je conçois des plateformes web utiles pour les entreprises : commande en ligne, portails B2B, EdTech, IA et automatisation.">
+  <meta property="og:image" content="images/avatar.jpg">
+  <meta property="og:locale" content="fr_FR">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8743b'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%230e0d0b'%3ELT%3C/text%3E%3C/svg%3E">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+
+  <script>
+    /* Applique le thème avant l'affichage pour éviter le flash */
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
-  <!-- BACKGROUND GRADIENT ORBS -->
-  <div class="bg-orb orb-1"></div>
-  <div class="bg-orb orb-2"></div>
-  <div class="bg-orb orb-3"></div>
+  <a class="skip-link" href="#main">Aller au contenu</a>
 
-  <header class="header">
+  <header class="header" id="top">
     <div class="container header-wrap">
-      <a href="#" class="brand-logo">Légérol TCHOGBE</a>
-      <nav class="nav-links">
-        <a href="#about">À Propos</a>
-        <a href="#competences">Compétences</a>
-        <a href="#travaux">Projets</a>
+      <a href="#top" class="brand" aria-label="Accueil">
+        <span class="brand-mark">LT</span>
+        <span class="brand-name">Légérol TCHOGBE</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="#projets">Projets</a>
         <a href="#parcours">Parcours</a>
-        <a href="#contact" class="nav-btn">Me Contacter</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact" class="nav-cta">Me contacter</a>
       </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Basculer le thème clair / sombre">
+          <i class="fas fa-moon icon-dark" aria-hidden="true"></i>
+          <i class="fas fa-sun icon-light" aria-hidden="true"></i>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero-section" id="about">
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <div class="badge-accent">Disponible pour de nouveaux projets</div>
-          <h1 class="hero-heading">Je crée des <span class="gradient-text">expériences d'exception</span>.</h1>
-          <p class="hero-lead">Développeur Web, Game Dev &amp; Digital Marketer
+          <p class="status"><span class="status-dot" aria-hidden="true"></span>Disponible immédiatement — freelance, CDI ou alternance</p>
 
-Passionné par le web, le jeu vidéo et l&#039;intelligence artificielle, je combine compétences techniques (HTML, CSS, JavaScript, outils IA) et vision stratégique grâce à ma certification en marketing digital. Curieux, autonome et créatif, je cherche aujourd&#039;hui à mettre mon énergie et mes compétences au service de projets ambitieux et stimulants.</p>
-          <div class="specs-grid theme-creative">
-    <div class="spec-item">
-      <div class="spec-icon"><i class="fas fa-calendar-alt"></i></div>
-      <div class="spec-content">
-        <span class="spec-label">Âge</span>
-        <span class="spec-value">21 ans</span>
-      </div>
-    </div>
-  
-    <div class="spec-item">
-      <div class="spec-icon"><i class="fas fa-briefcase"></i></div>
-      <div class="spec-content">
-        <span class="spec-label">Expérience</span>
-        <span class="spec-value">2 ans</span>
-      </div>
-    </div>
-  
-    <div class="spec-item">
-      <div class="spec-icon"><i class="fas fa-map-marker-alt"></i></div>
-      <div class="spec-content">
-        <span class="spec-label">Localisation</span>
-        <span class="spec-value">cotonou, Bénin</span>
-      </div>
-    </div>
-  
-    <div class="spec-item">
-      <div class="spec-icon"><i class="fas fa-clock"></i></div>
-      <div class="spec-content">
-        <span class="spec-label">Disponibilité</span>
-        <span class="spec-value">Immédiate</span>
-      </div>
-    </div>
-  
-    <div class="spec-item">
-      <div class="spec-icon"><i class="fas fa-file-contract"></i></div>
-      <div class="spec-content">
-        <span class="spec-label">Contrat</span>
-        <span class="spec-value">Freelance / CDI / Alternance</span>
-      </div>
-    </div>
-  
-    <div class="spec-item">
-      <div class="spec-icon"><i class="fas fa-route"></i></div>
-      <div class="spec-content">
-        <span class="spec-label">Mobilité</span>
-        <span class="spec-value">Disponible pour relocalisation / Hybride</span>
-      </div>
-    </div>
-  
-    <div class="spec-item">
-      <div class="spec-icon"><i class="fas fa-whatsapp"></i></div>
-      <div class="spec-content">
-        <span class="spec-label">WhatsApp</span>
-        <span class="spec-value"><a href="https://wa.me/2290157004681" target="_blank" class="spec-link">+229 015 700 468 1</a></span>
-      </div>
-    </div>
-  </div>
-          <div class="hero-cta-group">
-            <a href="#travaux" class="btn btn-filled">Explorer mes projets</a>
-            <a href="#contact" class="btn btn-outline">Discuter</a>
+          <h1 class="hero-title">
+            Je construis des plateformes web
+            <span class="accent">qui font tourner de vrais business.</span>
+          </h1>
+
+          <p class="hero-lead">
+            Développeur web full-stack basé à Cotonou. J'ai conçu la commande en ligne d'un restaurant,
+            le portail B2B d'un fournisseur de mobilier et une plateforme EdTech de soutien scolaire.
+            J'ajoute à la technique l'IA, l'automatisation et une vision marketing certifiée par l'OIF.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projets" class="btn btn-primary">Voir mes projets <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+            <a href="https://wa.me/2290157004681" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fab fa-whatsapp" aria-hidden="true"></i> Discuter sur WhatsApp</a>
           </div>
-          <div class="hero-socials-bar">
-            
-    <a href="https://github.com/legeroltchogbe01" target="_blank"><i class="fab fa-github"></i></a>
-    
-    
-    
-    <a href="mailto:legerolt@gmail.com"><i class="fas fa-envelope"></i></a>
-  
-          </div>
+
+          <ul class="facts" aria-label="Informations clés">
+            <li><i class="fas fa-location-dot" aria-hidden="true"></i><span><strong>Cotonou, Bénin</strong>Ouvert à la relocalisation et à l'hybride</span></li>
+            <li><i class="fas fa-briefcase" aria-hidden="true"></i><span><strong>2 ans d'expérience</strong>3 plateformes en production</span></li>
+          </ul>
         </div>
+
         <div class="hero-visual">
-          <div class="image-border-glow">
-            <img src="images/avatar.jpg" alt="Légérol TCHOGBE" class="avatar-img">
+          <div class="portrait">
+            <img src="images/avatar.jpg" alt="Portrait de Légérol TCHOGBE" width="450" height="800" fetchpriority="high">
+          </div>
+          <div class="portrait-badge">
+            <span class="badge-num">+60%</span>
+            <span class="badge-text">de ventes pour Attièkè Dèkoungbé après la mise en ligne</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section class="skills-section" id="competences">
+    <!-- ============ PROJETS ============ -->
+    <section class="section" id="projets">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Compétences</span>
-          <h2>Mon Expertise Technique</h2>
-        </div>
-        <div class="skills-carousel">
-          
-    <div class="skill-card reveal" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="skill-icon-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-      <h3 class="skill-name">JavaScript / TypeScript</h3>
-      <span class="skill-level">50% Expertise</span>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: 50%"></div>
-      </div>
-    </div>
-  
-    <div class="skill-card reveal" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="skill-icon-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-      <h3 class="skill-name">React / Next.js</h3>
-      <span class="skill-level">50% Expertise</span>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: 50%"></div>
-      </div>
-    </div>
-  
-    <div class="skill-card reveal" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="skill-icon-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-      <h3 class="skill-name">CSS &amp; Animations (Vanilla)</h3>
-      <span class="skill-level">70% Expertise</span>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: 70%"></div>
-      </div>
-    </div>
-  
-    <div class="skill-card reveal" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="skill-icon-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-      <h3 class="skill-name">Node.js &amp; API REST</h3>
-      <span class="skill-level">45% Expertise</span>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: 45%"></div>
-      </div>
-    </div>
-  
-    <div class="skill-card reveal" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="skill-icon-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-      <h3 class="skill-name">Prompt Engineering (Conception de prompts complexes pour LLM)</h3>
-      <span class="skill-level">65% Expertise</span>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: 65%"></div>
-      </div>
-    </div>
-  
-    <div class="skill-card reveal" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="skill-icon-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-      <h3 class="skill-name">Intégration d&#039;API IA (OpenAI API, Claude API)</h3>
-      <span class="skill-level">60% Expertise</span>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: 60%"></div>
-      </div>
-    </div>
-  
-    <div class="skill-card reveal" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="skill-icon-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-      <h3 class="skill-name">Utilisation d&#039;assistants de code (GitHub Copilot, Cursor, Ollama)</h3>
-      <span class="skill-level">70% Expertise</span>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: 70%"></div>
-      </div>
-    </div>
-  
-    <div class="skill-card reveal" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="skill-icon-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-      <h3 class="skill-name">Automatisation &amp; Workflow IA (N8N, Zapier + IA, Webhooks)</h3>
-      <span class="skill-level">85% Expertise</span>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: 85%"></div>
-      </div>
-    </div>
-  
-    <div class="skill-card reveal" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="skill-icon-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-      <h3 class="skill-name">Génération d&#039;images &amp; Assets 2D/3D (Midjourney, DALL-E, Stable Diffusion)</h3>
-      <span class="skill-level">50% Expertise</span>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: 50%"></div>
-      </div>
-    </div>
-  
-    <div class="skill-card reveal" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="skill-icon-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-      <h3 class="skill-name">Création de contenu &amp; Copywriting assisté par IA (ChatGPT, Claude)</h3>
-      <span class="skill-level">40% Expertise</span>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: 40%"></div>
-      </div>
-    </div>
-  
-    <div class="skill-card reveal" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="skill-icon-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-      <h3 class="skill-name">Génération &amp; Traitement audio/voix (ElevenLabs)</h3>
-      <span class="skill-level">80% Expertise</span>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: 80%"></div>
-      </div>
-    </div>
-  
-    <div class="skill-card reveal" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="skill-icon-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-      <h3 class="skill-name">Analyse de données &amp; Reporting assistés par IA</h3>
-      <span class="skill-level">85% Expertise</span>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: 85%"></div>
-      </div>
-    </div>
-  
-    <div class="skill-card reveal" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="skill-icon-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-      <h3 class="skill-name">Acquisition &amp; Référencement : SEO, campagnes réseaux sociaux (SMA), stratégies de contenu</h3>
-      <span class="skill-level">50% Expertise</span>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: 50%"></div>
-      </div>
-    </div>
-  
-    <div class="skill-card reveal" data-tilt data-tilt-max="10" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="skill-icon-placeholder">
-        <i class="fas fa-code"></i>
-      </div>
-      <h3 class="skill-name">Analyse &amp; Performance : Analyse d&#039;audience, suivi des métriques web (KPI, Analytics)</h3>
-      <span class="skill-level">50% Expertise</span>
-      <div class="skill-progress-track">
-        <div class="skill-progress-bar" style="width: 50%"></div>
-      </div>
-    </div>
-  
-        </div>
-      </div>
-    </section>
+        <header class="section-head">
+          <p class="eyebrow">01 — Projets</p>
+          <h2>Des produits en ligne, utilisés par de vrais clients</h2>
+        </header>
 
-    <!-- PROJECTS -->
-    <section class="projects-section" id="travaux">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Créations</span>
-          <h2>Projets Sélectionnés</h2>
-        </div>
-        <div class="projects-masonry">
-          
-    <div class="creative-project-card reveal" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="creative-project-image">
-        <img src="images/project-0.jpg" alt="Attiéké dêkoungbé">
-        <div class="project-overlay">
-          <div class="project-links">
-            <a href="https://attieke-dekoungbe.com/" target="_blank" aria-label="Demo"><i class="fas fa-external-link-alt"></i></a>
-            <a href="https://github.com/legeroltchogbe01/attieke-dekoungbe" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="creative-project-body">
-        <span class="category-badge">E-COMMERCE</span>
-        <h3>Attiéké dêkoungbé</h3>
-        <p><div class="project-meta-details" style="font-size:0.85em; font-weight:600; margin-bottom:8px; display:flex; gap:12px; opacity:0.85; color:var(--text-muted, #777);"><span><i class="far fa-calendar-alt"></i> 2026(3 mois)</span><span><i class="far fa-user"></i> Duo (Backend)</span></div>ce projet est de digitaliser le circuit de commande des produits du restaurants via une solution multi-plateforme performante, connectant directement les clients aux restaurant  tout en garantissant un accès simple et rapide.</p>
-        <div class="tech-tags">
-          <span>Capacitor</span><span>Node.js</span><span>JWT (JSON Web Tokens)</span><span>JavaScript / TypeScript</span>
-        </div>
-      </div>
-    </div>
-  
-    <div class="creative-project-card reveal" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="creative-project-image">
-        <img src="images/project-1.jpg" alt="Prof chez Vous">
-        <div class="project-overlay">
-          <div class="project-links">
-            <a href="https://prof-chez-vous-pcv.onrender.com/" target="_blank" aria-label="Demo"><i class="fas fa-external-link-alt"></i></a>
-            <a href="https://github.com/legeroltchogbe01/prof-chez-vous" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="creative-project-body">
-        <span class="category-badge">web social</span>
-        <h3>Prof chez Vous</h3>
-        <p><div class="project-meta-details" style="font-size:0.85em; font-weight:600; margin-bottom:8px; display:flex; gap:12px; opacity:0.85; color:var(--text-muted, #777);"><span><i class="far fa-calendar-alt"></i> 2025 (4mois)</span><span><i class="far fa-user"></i> solo(fullstack)</span></div>Prof Chez Vous est une solution EdTech béninoise conçue pour mettre en relation directe les parents d&#039;élèves avec des enseignants qualifiés et vérifiés.
-
-Son rôle est de structurer le marché du soutien scolaire à domicile à travers trois fonctions majeures:
--Mise en Relation &amp; Matching Pédagogique
--Gestion Multi-Profils &amp; Tableau de Bord
--Sécurité &amp; Modération</p>
-        <div class="tech-tags">
-          <span>Next.js / React</span><span>Tailwind CSS</span><span>PostgreSQL (Neon) / Prisma</span><span>Node.js (API Routes)</span>
-        </div>
-      </div>
-    </div>
-  
-    <div class="creative-project-card reveal" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.2">
-      <div class="creative-project-image">
-        <img src="images/project-2.jpg" alt="GMD Premium">
-        <div class="project-overlay">
-          <div class="project-links">
-            <a href="https://gmdpremiun.com/" target="_blank" aria-label="Demo"><i class="fas fa-external-link-alt"></i></a>
-            <a href="https://github.com/legeroltchogbe01/gmd-premium" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="creative-project-body">
-        <span class="category-badge">Plateforme B2B &amp; Gestion d&#039;Équipements</span>
-        <h3>GMD Premium</h3>
-        <p><div class="project-meta-details" style="font-size:0.85em; font-weight:600; margin-bottom:8px; display:flex; gap:12px; opacity:0.85; color:var(--text-muted, #777);"><span><i class="far fa-calendar-alt"></i> 2026(2mois)</span><span><i class="far fa-user"></i> solo(fullstack)</span></div>La plateforme GMD Premium est un espace client et portail B2B dédié aux professionnels de l&#039;ameublement, du décor et de la fourniture d&#039;équipements.</p>
-        <div class="tech-tags">
-          <span>JavaScript / HTML5 / CSS3</span><span>Node.js / Express</span><span>PostgreSQL / MySQL</span><span>API REST / Gateways de paiement</span>
-        </div>
-      </div>
-    </div>
-  
-        </div>
-      </div>
-    </section>
-
-    <!-- TIMELINE -->
-    <section class="timeline-section" id="parcours">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Expérience</span>
-          <h2>Mon Parcours Professionnel</h2>
-        </div>
-        <div class="timeline-flow">
-          
-    <div class="timeline-block reveal">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <span class="time-range">08/07/2024 - 07/11/2024</span>
-        <h3>Assistant développeur web</h3>
-        <h4>OGI-Sarl (Africabourses)</h4>
-        <p>OGI SARL (Omnium de Gestion et d&#039;Informatique SARL)
-Participation à la refonte d’interfaces utilisateur et à l’amélioration des performances du site.
- Collaboration avec l’équipe technique pour intégrer les bases de données et assurer la stabilité serveur.
- Contribution à la documentation et aux tests fonctionnels dans un environnement agile.<div class="experience-achievements" style="margin-top:10px; font-size:0.9em; border-left: 2px solid var(--accent); padding-left: 10px; opacity: 0.95;"><strong>Réalisations clés :</strong> Expérience interfaces utilisateur (HTML, CSS, JavaScript)  20%</div></p>
-      </div>
-    </div>
-  
-    <div class="timeline-block reveal">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <span class="time-range">18/12/2025 - présent</span>
-        <h3>Développeur web : Auditeur Technique &amp; Développeur</h3>
-        <h4>Attiékè dêkoungbé</h4>
-        <p>Nos Réalisations sur le projet Attiéké Dêkoungbé
-Création du site web : Conception et développement complet de la plateforme web du restaurant.
-
-Mise en ligne du menu : Intégration d&#039;un catalogue clair présentant les différentes formules et plats .
-
-Système de commande en ligne : Mise en place d&#039;un parcours simple et rapide pour permettre aux clients de passer leurs commandes facilement.
-
-Espace client sécurisé : Ajout de la connexion simplifiée et sécurisée (notamment avec un compte Google).
-
-Visibilité sur Google : Optimisation du site pour qu&#039;il apparaisse facilement dans les recherches des clients à Cotonou.<div class="experience-achievements" style="margin-top:10px; font-size:0.9em; border-left: 2px solid var(--accent); padding-left: 10px; opacity: 0.95;"><strong>Réalisations clés :</strong> Augmentation des ventes de 60%, Amélioration des achats via la plateforme,
-Suivi et gestion des flux,</div></p>
-      </div>
-    </div>
-  
-    <div class="timeline-block reveal">
-      <div class="timeline-dot"></div>
-      <div class="timeline-card">
-        <span class="time-range">25/06/2026 - présent</span>
-        <h3>Développeur Full-Stack / Intégrateur Système</h3>
-        <h4>Galassy Meuble Décor</h4>
-        <p>Gestion du Compte B2B &amp; Statuts Gold : Espaces clients sécurisés permettant aux professionnels d&#039;accéder à des catalogues réservés, des devis personnalisés et des avantages tarifaires sur-mesure.
-
-Suivi Financier &amp; Commandes à Crédit : Module d&#039;échéancier intégré permettant la gestion des paiements au comptant et le suivi des règlements échelonnés pour les commandes sous crédit pro.
-
-Logistique &amp; Tracking des Livraisons : Suivi en temps réel de l&#039;état des commandes, de la validation du devis jusqu&#039;à la programmation et la confirmation de livraison.</p>
-      </div>
-    </div>
-  
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact-section" id="contact">
-      <div class="container">
-        <div class="glass-contact-card">
-          <h2>Prêt à donner vie à vos projets ?</h2>
-          <p>Discutons de vos besoins et concevons quelque chose d'incroyable ensemble.</p>
-          <a href="mailto:legerolt@gmail.com" class="btn-gradient-fill">Envoyer un Email <i class="fas fa-arrow-right"></i></a>
-          <div class="contact-social-icons">
-            
-    <a href="https://github.com/legeroltchogbe01" target="_blank"><i class="fab fa-github"></i></a>
-    
-    
-    
-    <a href="mailto:legerolt@gmail.com"><i class="fas fa-envelope"></i></a>
-  
-          </div>
-        </div>
-      </div>
-    </section>
-  
-      <section class="section certifications-container" id="certifications" style="padding: 80px 0; border-top: 1px solid var(--border, rgba(0,0,0,0.1));">
-        <div class="container" style="max-width:1100px; margin:0 auto; padding:0 20px;">
-          <h2 class="section-title" style="margin-bottom: 40px; font-size: 2.2rem; text-align: center; color:var(--text-title, #111);">Certifications</h2>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-            
-              <div class="cert-card reveal" style="background: var(--card-bg, #fff); border: 1px solid var(--border, rgba(0,0,0,0.1)); padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: all 0.3s ease; display:flex; align-items:center; gap:15px;">
-                <div style="background: var(--accent, #6366f1); color: #fff; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink:0;">
-                  <i class="fas fa-certificate"></i>
-                </div>
-                <div>
-                  <h3 style="margin: 0; font-size: 1.15rem; color: var(--text-title, #111);">Marketing Numérique</h3>
-                  <p style="margin: 3px 0 0 0; font-size: 0.85rem; color: var(--text-muted, #666);">Organisation Internationnale de la francophonie &middot; 10/02/2026</p>
-                </div>
+        <div class="projects">
+          <!-- Projet 1 -->
+          <article class="project reveal">
+            <a class="project-media" href="https://attieke-dekoungbe.com/" target="_blank" rel="noopener" aria-label="Voir le site Attièkè Dèkoungbé">
+              <img src="images/project-0.jpg" alt="Page d'accueil du site Attièkè Dèkoungbé" width="800" height="387" loading="lazy">
+            </a>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="tag">E-commerce · Restauration</span>
+                <span><i class="far fa-calendar" aria-hidden="true"></i> 2026 · 3 mois</span>
+                <span><i class="far fa-user" aria-hidden="true"></i> Duo · Back-end</span>
               </div>
-            
+              <h3>Attièkè Dèkoungbé</h3>
+              <p>Digitalisation complète de la prise de commande d'un fast-food ivoirien à Cotonou : les clients commandent en quelques clics, sur le web comme sur mobile.</p>
+              <ul class="project-points">
+                <li>Menu en ligne, panier et parcours de commande rapide</li>
+                <li>Connexion sécurisée (JWT, compte Google)</li>
+                <li>Application multi-plateforme avec Capacitor</li>
+                <li>Référencement local pour être trouvé à Cotonou</li>
+              </ul>
+              <p class="project-result"><i class="fas fa-chart-line" aria-hidden="true"></i> Résultat : ventes en hausse de 60 %</p>
+              <ul class="stack" aria-label="Technologies">
+                <li>JavaScript / TypeScript</li><li>Node.js</li><li>JWT</li><li>Capacitor</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://attieke-dekoungbe.com/" target="_blank" rel="noopener" class="link-strong">Voir le site <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a href="https://github.com/legeroltchogbe01/attieke-dekoungbe" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 2 -->
+          <article class="project reveal">
+            <a class="project-media" href="https://gmdpremiun.com/" target="_blank" rel="noopener" aria-label="Voir le site GMD Premium">
+              <img src="images/project-2.jpg" alt="Interface du portail GMD Premium" width="800" height="399" loading="lazy">
+            </a>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="tag">Portail B2B</span>
+                <span><i class="far fa-calendar" aria-hidden="true"></i> 2026 · 2 mois</span>
+                <span><i class="far fa-user" aria-hidden="true"></i> Solo · Full-stack</span>
+              </div>
+              <h3>GMD Premium</h3>
+              <p>Espace client et portail B2B de Galassy Meuble Décor, destiné aux professionnels de l'ameublement, de la décoration et de l'équipement.</p>
+              <ul class="project-points">
+                <li>Comptes professionnels avec statut Gold et tarifs dédiés</li>
+                <li>Devis personnalisés et commandes à crédit avec échéancier</li>
+                <li>Suivi des commandes jusqu'à la livraison</li>
+                <li>Intégration de passerelles de paiement</li>
+              </ul>
+              <ul class="stack" aria-label="Technologies">
+                <li>JavaScript</li><li>Node.js / Express</li><li>PostgreSQL / MySQL</li><li>API REST</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://gmdpremiun.com/" target="_blank" rel="noopener" class="link-strong">Voir le site <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a href="https://github.com/legeroltchogbe01/gmd-premium" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 3 -->
+          <article class="project reveal">
+            <a class="project-media" href="https://prof-chez-vous-pcv.onrender.com/" target="_blank" rel="noopener" aria-label="Voir le site Prof Chez Vous">
+              <img src="images/project-1.jpg" alt="Page d'accueil de Prof Chez Vous" width="800" height="392" loading="lazy">
+            </a>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="tag">EdTech</span>
+                <span><i class="far fa-calendar" aria-hidden="true"></i> 2025 · 4 mois</span>
+                <span><i class="far fa-user" aria-hidden="true"></i> Solo · Full-stack</span>
+              </div>
+              <h3>Prof Chez Vous</h3>
+              <p>Plateforme béninoise qui met en relation les parents d'élèves avec des enseignants qualifiés et vérifiés, pour structurer le soutien scolaire à domicile.</p>
+              <ul class="project-points">
+                <li>Mise en relation et matching pédagogique</li>
+                <li>Profils multiples (parents, enseignants) et tableaux de bord</li>
+                <li>Vérification des enseignants et modération</li>
+              </ul>
+              <ul class="stack" aria-label="Technologies">
+                <li>Next.js / React</li><li>Tailwind CSS</li><li>PostgreSQL (Neon)</li><li>Prisma</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://prof-chez-vous-pcv.onrender.com/" target="_blank" rel="noopener" class="link-strong">Voir le site <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a href="https://github.com/legeroltchogbe01/prof-chez-vous" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARCOURS ============ -->
+    <section class="section section-alt" id="parcours">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">02 — Parcours</p>
+          <h2>Expérience professionnelle</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="job reveal">
+            <div class="job-date">Juin 2026 — aujourd'hui</div>
+            <div class="job-body">
+              <h3>Développeur full-stack / Intégrateur système</h3>
+              <p class="job-org">Galassy Meuble Décor</p>
+              <ul>
+                <li>Espaces clients B2B sécurisés : catalogues réservés, devis personnalisés et avantages tarifaires (statut Gold).</li>
+                <li>Module d'échéancier pour les paiements comptant et le suivi des règlements à crédit.</li>
+                <li>Suivi en temps réel des commandes, de la validation du devis à la confirmation de livraison.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="job reveal">
+            <div class="job-date">Déc. 2025 — aujourd'hui</div>
+            <div class="job-body">
+              <h3>Développeur web — audit technique &amp; développement</h3>
+              <p class="job-org">Attièkè Dèkoungbé</p>
+              <ul>
+                <li>Conception et développement complet de la plateforme web du restaurant.</li>
+                <li>Catalogue en ligne des formules et plats, parcours de commande simple et rapide.</li>
+                <li>Espace client sécurisé avec connexion Google.</li>
+                <li>Optimisation SEO pour la visibilité locale à Cotonou.</li>
+              </ul>
+              <p class="job-result"><i class="fas fa-chart-line" aria-hidden="true"></i> Ventes en hausse de 60 %, suivi et gestion des flux de commandes.</p>
+            </div>
+          </li>
+
+          <li class="job reveal">
+            <div class="job-date">Juil. 2024 — Nov. 2024</div>
+            <div class="job-body">
+              <h3>Assistant développeur web</h3>
+              <p class="job-org">OGI SARL — Africabourses</p>
+              <ul>
+                <li>Refonte d'interfaces utilisateur (HTML, CSS, JavaScript) et amélioration des performances du site.</li>
+                <li>Intégration des bases de données avec l'équipe technique et suivi de la stabilité serveur.</li>
+                <li>Documentation et tests fonctionnels en environnement agile.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ COMPÉTENCES ============ -->
+    <section class="section" id="competences">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">03 — Compétences</p>
+          <h2>Ce que j'apporte à une équipe</h2>
+        </header>
+
+        <div class="skills">
+          <div class="skill-group reveal">
+            <div class="skill-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
+            <h3>Développement web</h3>
+            <p>Du front-end soigné à l'API et la base de données.</p>
+            <ul class="chips">
+              <li>JavaScript / TypeScript</li><li>React / Next.js</li><li>HTML / CSS &amp; animations</li>
+              <li>Node.js / Express</li><li>API REST</li><li>PostgreSQL / MySQL</li><li>Prisma</li>
+              <li>Tailwind CSS</li><li>Capacitor</li><li>Authentification JWT</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <div class="skill-icon"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+            <h3>IA &amp; automatisation</h3>
+            <p>Intégrer l'IA là où elle fait gagner du temps.</p>
+            <ul class="chips">
+              <li>Automatisation (n8n, Zapier, webhooks)</li><li>API OpenAI &amp; Claude</li><li>Prompt engineering</li>
+              <li>Analyse de données &amp; reporting</li><li>Audio &amp; voix (ElevenLabs)</li>
+              <li>Visuels IA (Midjourney, DALL·E, Stable Diffusion)</li><li>Copilot, Cursor, Ollama</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <div class="skill-icon"><i class="fas fa-bullhorn" aria-hidden="true"></i></div>
+            <h3>Marketing digital</h3>
+            <p>Des produits pensés pour être trouvés et utilisés.</p>
+            <ul class="chips">
+              <li>SEO &amp; référencement local</li><li>Campagnes réseaux sociaux</li><li>Stratégie de contenu</li>
+              <li>Copywriting</li><li>Analytics &amp; KPI</li><li>Analyse d'audience</li>
+            </ul>
           </div>
         </div>
-      </section>
-    </main>
+
+        <div class="cert reveal">
+          <div class="cert-icon"><i class="fas fa-award" aria-hidden="true"></i></div>
+          <div>
+            <p class="cert-label">Certification</p>
+            <h3>Marketing numérique</h3>
+            <p class="cert-org">Organisation internationale de la Francophonie (OIF) · Février 2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <p class="eyebrow">04 — Contact</p>
+          <h2>Un projet, un poste, une idée&nbsp;? Parlons-en.</h2>
+          <p class="contact-lead">Je réponds rapidement, par email ou sur WhatsApp.</p>
+
+          <div class="contact-actions">
+            <a href="mailto:legerolt@gmail.com" class="btn btn-primary"><i class="fas fa-envelope" aria-hidden="true"></i> legerolt@gmail.com</a>
+            <a href="https://wa.me/2290157004681" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fab fa-whatsapp" aria-hidden="true"></i> +229 01 57 00 46 81</a>
+          </div>
+
+          <a href="https://github.com/legeroltchogbe01" target="_blank" rel="noopener" class="contact-github"><i class="fab fa-github" aria-hidden="true"></i> github.com/legeroltchogbe01</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Légérol TCHOGBE. Conçu avec passion.</p>
+    <div class="container footer-wrap">
+      <p>&copy; <span id="year">2026</span> Légérol TCHOGBE · Cotonou, Bénin</p>
+      <a href="#top" class="to-top">Haut de page <i class="fas fa-arrow-up" aria-hidden="true"></i></a>
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
-  <script src="script.js"></script>
-
-    <button class="portfolio-theme-toggle-btn" onclick="togglePortfolioTheme()" aria-label="Changer de mode" style="position:fixed; bottom:30px; right:30px; z-index:9999; background:var(--card-bg, #fff); border:2px solid var(--border, #eee); color:var(--text-title, #333); width:50px; height:50px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 15px rgba(0,0,0,0.15); transition:all 0.3s; font-size:1.3rem;">
-      <i class="fas fa-adjust"></i>
-    </button>
-    <style>
-      .portfolio-theme-toggle-btn:hover {
-        transform: scale(1.1);
-      }
-       /* Define theme colors for light/dark mode override */
-      body.dark-mode-override {
-        background: #0f172a !important;
-        color: #cbd5e1 !important;
-      }
-      body.dark-mode-override h1, 
-      body.dark-mode-override h2, 
-      body.dark-mode-override h3, 
-      body.dark-mode-override h4, 
-      body.dark-mode-override h5, 
-      body.dark-mode-override h6, 
-      body.dark-mode-override .section-title, 
-      body.dark-mode-override .hero-title,
-      body.dark-mode-override .logo,
-      body.dark-mode-override .nav a,
-      body.dark-mode-override .project-title,
-      body.dark-mode-override .timeline-role,
-      body.dark-mode-override strong {
-        color: #f8fafc !important;
-      }
-      body.dark-mode-override .project-card, 
-      body.dark-mode-override .skill-item, 
-      body.dark-mode-override .timeline-item, 
-      body.dark-mode-override .cert-card,
-      body.dark-mode-override header,
-      body.dark-mode-override footer,
-      body.dark-mode-override .card {
-        background: #1e293b !important;
-        border-color: #334155 !important;
-        color: #cbd5e1 !important;
-      }
-      body.dark-mode-override p,
-      body.dark-mode-override span,
-      body.dark-mode-override li,
-      body.dark-mode-override .hero-desc,
-      body.dark-mode-override .spec-label,
-      body.dark-mode-override .spec-value,
-      body.dark-mode-override .skill-name,
-      body.dark-mode-override .project-desc,
-      body.dark-mode-override .timeline-desc,
-      body.dark-mode-override .timeline-org,
-      body.dark-mode-override .cert-card p,
-      body.dark-mode-override footer p,
-      body.dark-mode-override footer div,
-      body.dark-mode-override .spec-link {
-        color: #cbd5e1 !important;
-      }
-      body.dark-mode-override .tech-tag {
-        background: rgba(255,255,255,0.08) !important;
-        color: #f8fafc !important;
-      }
-      body.dark-mode-override .spec-label, 
-      body.dark-mode-override .timeline-period,
-      body.dark-mode-override .timeline-org {
-        color: #94a3b8 !important;
-      }
-      body.dark-mode-override section,
-      body.dark-mode-override .skills,
-      body.dark-mode-override .experience,
-      body.dark-mode-override .hero,
-      body.dark-mode-override .contact,
-      body.dark-mode-override .about,
-      body.dark-mode-override .container,
-      body.dark-mode-override .profile-section {
-        background: #0f172a !important;
-        background-color: #0f172a !important;
-      }
-      body.dark-mode-override .btn-secondary,
-      body.dark-mode-override .btn-outline,
-      body.dark-mode-override .proj-link {
-        color: #cbd5e1 !important;
-        border-color: #334155 !important;
-        background: transparent !important;
-      }
-      body.dark-mode-override .btn-secondary:hover,
-      body.dark-mode-override .btn-outline:hover,
-      body.dark-mode-override .proj-link:hover {
-        background: #1e293b !important;
-        color: #f8fafc !important;
-      }
-      body.dark-mode-override .btn-primary {
-        background: var(--accent, #6366f1) !important;
-        color: #ffffff !important;
-        border-color: var(--accent, #6366f1) !important;
-      }
-      body.dark-mode-override .social-links a,
-      body.dark-mode-override .social-link,
-      body.dark-mode-override .social-icon,
-      body.dark-mode-override .social-links i,
-      body.dark-mode-override .hero-socials-bar a,
-      body.dark-mode-override .hero-socials-bar a i,
-      body.dark-mode-override .contact-social-icons a,
-      body.dark-mode-override .contact-social-icons a i {
-        color: #cbd5e1 !important;
-      }
-      body.dark-mode-override .hero-socials-bar a,
-      body.dark-mode-override .contact-social-icons a {
-        background-color: rgba(255, 255, 255, 0.05) !important;
-        border-color: rgba(255, 255, 255, 0.1) !important;
-      }
-      body.dark-mode-override .social-links a:hover,
-      body.dark-mode-override .social-link:hover,
-      body.dark-mode-override .social-icon:hover,
-      body.dark-mode-override .hero-socials-bar a:hover,
-      body.dark-mode-override .contact-social-icons a:hover {
-        color: #f8fafc !important;
-        background-color: rgba(255, 255, 255, 0.15) !important;
-      }
-      body.dark-mode-override .portfolio-theme-toggle-btn {
-        background: #1e293b !important;
-        border-color: #334155 !important;
-        color: #f8fafc !important;
-      }
-
-      /* Light mode overrides for naturally dark themes */
-      body.light-mode-override {
-        background: #f8fafc !important;
-        color: #334155 !important;
-      }
-      body.light-mode-override h1, 
-      body.light-mode-override h2, 
-      body.light-mode-override h3, 
-      body.light-mode-override h4, 
-      body.light-mode-override h5, 
-      body.light-mode-override h6, 
-      body.light-mode-override .section-title, 
-      body.light-mode-override .hero-title,
-      body.light-mode-override .logo,
-      body.light-mode-override .nav a,
-      body.light-mode-override .project-title,
-      body.light-mode-override .timeline-role,
-      body.light-mode-override strong {
-        color: #0f172a !important;
-      }
-      body.light-mode-override .project-card, 
-      body.light-mode-override .skill-item, 
-      body.light-mode-override .timeline-item, 
-      body.light-mode-override .cert-card,
-      body.light-mode-override header,
-      body.light-mode-override footer,
-      body.light-mode-override .card {
-        background: #ffffff !important;
-        border-color: #e2e8f0 !important;
-        color: #334155 !important;
-      }
-      body.light-mode-override p,
-      body.light-mode-override span,
-      body.light-mode-override li,
-      body.light-mode-override .hero-desc,
-      body.light-mode-override .spec-label,
-      body.light-mode-override .spec-value,
-      body.light-mode-override .skill-name,
-      body.light-mode-override .project-desc,
-      body.light-mode-override .timeline-desc,
-      body.light-mode-override .timeline-org,
-      body.light-mode-override .cert-card p,
-      body.light-mode-override footer p,
-      body.light-mode-override footer div,
-      body.light-mode-override .spec-link {
-        color: #334155 !important;
-      }
-      body.light-mode-override .tech-tag {
-        background: rgba(0,0,0,0.05) !important;
-        color: #0f172a !important;
-      }
-      body.light-mode-override .spec-label, 
-      body.light-mode-override .timeline-period,
-      body.light-mode-override .timeline-org {
-        color: #64748b !important;
-      }
-      body.light-mode-override section,
-      body.light-mode-override .skills,
-      body.light-mode-override .experience,
-      body.light-mode-override .hero,
-      body.light-mode-override .contact,
-      body.light-mode-override .about,
-      body.light-mode-override .container,
-      body.light-mode-override .profile-section {
-        background: #f8fafc !important;
-        background-color: #f8fafc !important;
-      }
-      body.light-mode-override .btn-secondary,
-      body.light-mode-override .btn-outline,
-      body.light-mode-override .proj-link {
-        color: #334155 !important;
-        border-color: #e2e8f0 !important;
-        background: transparent !important;
-      }
-      body.light-mode-override .btn-secondary:hover,
-      body.light-mode-override .btn-outline:hover,
-      body.light-mode-override .proj-link:hover {
-        background: #ffffff !important;
-        color: #0f172a !important;
-      }
-      body.light-mode-override .btn-primary {
-        background: var(--accent, #6366f1) !important;
-        color: #ffffff !important;
-        border-color: var(--accent, #6366f1) !important;
-      }
-      body.light-mode-override .social-links a,
-      body.light-mode-override .social-link,
-      body.light-mode-override .social-icon,
-      body.light-mode-override .social-links i,
-      body.light-mode-override .hero-socials-bar a,
-      body.light-mode-override .hero-socials-bar a i,
-      body.light-mode-override .contact-social-icons a,
-      body.light-mode-override .contact-social-icons a i {
-        color: #334155 !important;
-      }
-      body.light-mode-override .hero-socials-bar a,
-      body.light-mode-override .contact-social-icons a {
-        background-color: rgba(0, 0, 0, 0.05) !important;
-        border-color: rgba(0, 0, 0, 0.1) !important;
-      }
-      body.light-mode-override .social-links a:hover,
-      body.light-mode-override .social-link:hover,
-      body.light-mode-override .social-icon:hover,
-      body.light-mode-override .hero-socials-bar a:hover,
-      body.light-mode-override .contact-social-icons a:hover {
-        color: #0f172a !important;
-        background-color: rgba(0, 0, 0, 0.1) !important;
-      }
-      body.light-mode-override .cyan {
-        color: #0369a1 !important;
-      }
-      body.light-mode-override .green {
-        color: #15803d !important;
-      }
-      body.light-mode-override .yellow {
-        color: #a16207 !important;
-      }
-      body.light-mode-override .comment {
-        color: #64748b !important;
-      }
-      body.light-mode-override .portfolio-theme-toggle-btn {
-        background: #ffffff !important;
-        border-color: #e2e8f0 !important;
-        color: #0f172a !important;
-      }
-
-      /* Global Mobile Responsiveness */
-      @media (max-width: 600px) {
-        .specs-grid {
-          grid-template-columns: 1fr !important;
-          gap: 12px !important;
-          margin: 1.5rem 0 !important;
-          padding: 1rem 0 !important;
-        }
-        .cert-card {
-          flex-direction: column !important;
-          text-align: center;
-          gap: 10px !important;
-        }
-        .hero-cta-group, .hero-actions {
-          flex-direction: column !important;
-          gap: 10px !important;
-          width: 100% !important;
-          display: flex !important;
-        }
-        .hero-cta-group a, .hero-actions a, .hero-actions button {
-          width: 100% !important;
-          text-align: center !important;
-          box-sizing: border-box !important;
-        }
-      }
-    </style>
-    <script>
-      function togglePortfolioTheme() {
-        const isDarkDefault = ['creative', 'developer'].includes('creative');
-        if (isDarkDefault) {
-          document.body.classList.toggle('light-mode-override');
-          localStorage.setItem('portfolio-mode', document.body.classList.contains('light-mode-override') ? 'light' : 'dark');
-        } else {
-          document.body.classList.toggle('dark-mode-override');
-          localStorage.setItem('portfolio-mode', document.body.classList.contains('dark-mode-override') ? 'dark' : 'light');
-        }
-      }
-      (function() {
-        const isDarkDefault = ['creative', 'developer'].includes('creative');
-        const savedMode = localStorage.getItem('portfolio-mode');
-        if (savedMode) {
-          if (isDarkDefault && savedMode === 'light') {
-            document.body.classList.add('light-mode-override');
-          } else if (!isDarkDefault && savedMode === 'dark') {
-            document.body.classList.add('dark-mode-override');
-          }
-        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          if (!isDarkDefault) {
-            document.body.classList.add('dark-mode-override');
-          }
-        }
-      })();
-    </script>
-  </body>
+  <script src="script.js" defer></script>
+</body>
 </html>
